@@ -8,5 +8,5 @@ function logDriversByHometown(drivers, hometown) {
   })
 }
 function driversByRevenue(drivers){
-  drivers.slice().sort(driver => driver.revenue)
+  drivers.slice().sort(a,b => a.revenue, b.revenue)
 }
