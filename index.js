@@ -7,6 +7,9 @@ function logDriversByHometown(drivers, hometown) {
     if (driver.hometown === hometown) { console.log(driver.name) }
   })
 }
+function driversByRevenue(drivers) {
+  return drivers.slice().sort( (a, b) => {return a.revenue - b.revenue} )
+}
 function driversByName(drivers) {
   return drivers.slice().sort( (a, b) => {return a.name.localeCompare(b.name)} )
 }
