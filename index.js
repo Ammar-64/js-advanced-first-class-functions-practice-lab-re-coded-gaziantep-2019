@@ -14,7 +14,8 @@ function driversByName(drivers) {
   return drivers.slice().sort( (a, b) => {return a.name.localeCompare(b.name)} )
 }
 function totalRevenue(drivers) {
-  return drivers.reduce((total, driver) => {return total + driver.revenue}, 0)
+  let total = 0;
+  return drivers.reduce((total, driver) => {return total += driver.revenue}, 0)
 }
 function averageRevenue(drivers) {
   return totalRevenue(drivers) / drivers.length
